@@ -49,7 +49,7 @@ namespace GameAnalyticsSDK.Events
 #if !UNITY_WSA && !UNITY_WP_8_1
                     stackTrace = (new System.Diagnostics.StackTrace()).ToString ();
 #endif
-				}
+                }
 				_errorCount++;
 
 				string lString = logString.Replace('"', '\'').Replace('\n', ' ').Replace('\r', ' ');

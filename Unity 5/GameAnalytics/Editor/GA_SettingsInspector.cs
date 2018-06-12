@@ -1477,12 +1477,12 @@ namespace GameAnalyticsSDK.Editor
             Hashtable jsonTable = new Hashtable();
             jsonTable["email"] = ga.EmailGA;
             jsonTable["password"] = ga.PasswordGA;
-			jsonTable["password_confirm"] = signup.PasswordConfirm;
-			jsonTable["first_name"] = signup.FirstName;
-			jsonTable["last_name"] = signup.LastName;
+            jsonTable["password_confirm"] = signup.PasswordConfirm;
+            jsonTable["first_name"] = signup.FirstName;
+            jsonTable["last_name"] = signup.LastName;
             jsonTable["studio_name"] = ga.StudioName;
-			jsonTable["email_opt_out"] = signup.EmailOptIn;
-			jsonTable["accept_terms"] = signup.AcceptedTerms;
+            jsonTable["email_opt_out"] = signup.EmailOptIn;
+            jsonTable["accept_terms"] = signup.AcceptedTerms;
 
             byte[] data = System.Text.Encoding.UTF8.GetBytes(GA_MiniJSON.JsonEncode(jsonTable));
 
@@ -2121,7 +2121,7 @@ namespace GameAnalyticsSDK.Editor
             {
                 result = "iOS";
             }
-            if (platform == RuntimePlatform.tvOS) {
+			if ((int)platform == 31 /* RuntimePlatform.tvOS */) {
                 result = "tvOS";
             }
             else if (platform == RuntimePlatform.WSAPlayerARM ||

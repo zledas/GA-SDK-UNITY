@@ -52,6 +52,12 @@ PluginImporter:
     Tizen:
       enabled: 0
       settings: {}
+    WP8:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+        DontProcess: False
+        PlaceholderPath: 
     Win:
       enabled: 1
       settings:
@@ -61,7 +67,7 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     WindowsStoreApps:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: AnyCPU
         DontProcess: False

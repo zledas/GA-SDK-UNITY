@@ -97,8 +97,8 @@ namespace GameAnalyticsSDK.Setup
         public string Changes = "";
 
         public bool SignUpOpen = true;
-		public string StudioName = "";
-		public string GameName = "";
+        public string StudioName = "";
+        public string GameName = "";
         public string EmailGA = "";
 
         [System.NonSerialized]
@@ -247,7 +247,7 @@ namespace GameAnalyticsSDK.Setup
             RuntimePlatform.IPhonePlayer,
             RuntimePlatform.LinuxPlayer,
             RuntimePlatform.OSXPlayer,
-            RuntimePlatform.tvOS,
+            //RuntimePlatform.tvOS,
             RuntimePlatform.WebGLPlayer,
             RuntimePlatform.WindowsPlayer,
             RuntimePlatform.WSAPlayerARM,
@@ -265,19 +265,19 @@ namespace GameAnalyticsSDK.Setup
 
                 if(value == RuntimePlatform.IPhonePlayer)
                 {
-                    if(!this.Platforms.Contains(RuntimePlatform.tvOS) && !this.Platforms.Contains(value))
-                    {
-                        result.Add(value.ToString());
-                    }
-                    else
-                    {
+                    //if(!this.Platforms.Contains((RuntimePlatform)31 /* RuntimePlatform.tvOS */) && !this.Platforms.Contains(value))
+                    //{
+                    //    result.Add(value.ToString());
+                    //}
+                    //else
+                    //{
                         if(!this.Platforms.Contains(value))
                         {
                             result.Add(value.ToString());
                         }
-                    }
+                    //}
                 }
-                else if(value == RuntimePlatform.tvOS)
+                else if((int)value == 31 /* RuntimePlatform.tvOS */)
                 {
                     if(!this.Platforms.Contains(RuntimePlatform.IPhonePlayer) && !this.Platforms.Contains(value))
                     {

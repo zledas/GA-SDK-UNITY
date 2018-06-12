@@ -43,6 +43,7 @@ namespace GameAnalyticsSDK.Editor
 			}
 		}
 		
+		/*
 		[MenuItem ("Window/GameAnalytics/PlayMaker/Toggle Scripts", false, 400)]
 		static void TogglePlayMaker ()
 		{
@@ -92,6 +93,7 @@ namespace GameAnalyticsSDK.Editor
 				Debug.Log("Disabled PlayMaker Scripts.");
 			}
 		}
+		*/
 
         private static readonly string PlayServicesAdsArrPath = Application.dataPath + "/Plugins/Android/play-services-ads-9.4.0.aar";
         private static readonly string PlayServicesBasementArrPath = Application.dataPath + "/Plugins/Android/play-services-basement-9.4.0.aar";
